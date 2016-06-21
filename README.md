@@ -1,2 +1,2 @@
 ###tesk
-[查看](http://Zhaokung.gitub.io/TEST46/)
+[查看](http://Zhaokung.github.io/TEST46/)
