@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>JavaScript and Tree</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 10px 0 0 0;
+        }
+        #root{
+            display: flex;
+            flex-flow: row wrap;
+            flex-direction: row;
+            /*定义空余空间的分配*/
+            align-items: stretch;
+            height: 400px;
+        }
+        #root > .child{
+            border: 1px solid black;
+        }
+
+        .child{
+            display: flex;
+            flex-grow: 1;
+            border: 1px solid red;
+            margin: 30px;
+            width: auto;
+            background-color: #fff;
+            transition: background-color 0.3s ease;
+        }
+        #focus{
+            background-color: aqua;
+        }
+        #highlight{
+            background-color: sienna;
+        }
+        #searchResult{
+            display: inline-block;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <button id="preorderTraversal">先序遍历</button>
+    <button id="postorderTraversal">后序遍历</button>
+    <input id="searchText" title="Search" type="text">
+    <button id="preordersearchBtn">先序搜索</button>
+    <button id="postordersearchBtn">后序搜索</button>
+    <p id="searchResult"> </p>
+    <div id="root"><div id="" data="root" class="child">root<div id="" data="a" class="child">a<div id="" data="a1" class="child">a1</div><div id="" data="a2" class="child">a2</div></div><div id="" data="b" class="child">b<div id="" data="b1" class="child">b1<div id="" data="b1.1" class="child">b1.1</div><div id="" data="b1.2" class="child">b1.2</div><div id="" data="b1.3" class="child">b1.3<div id="" data="b1.3.1" class="child">b1.3.1</div></div></div><div id="" data="b2" class="child">b2<div id="" data="b2.1" class="child">b2.1</div></div></div></div></div>
+
+<script src="JavaScript%20and%20Tree_files/tree.js"></script>
+
+
+</body></html>

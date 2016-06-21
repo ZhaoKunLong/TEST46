@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="Title_files/style.css">
+</head>
+<body>
+
+<fieldset id="form-gra-time">
+	<legend class="form_title">空气质量指数</legend>
+	<span>日期粒度:</span>
+	<label>日<input name="gra-time" value="day" type="radio"></label>
+	<label>周<input name="gra-time" value="week" type="radio"></label>
+	<label>月<input checked="checked" name="gra-time" value="month" type="radio"></label>
+
+	<span class="select_city">选择城市</span>
+	<select id="city-select"><option>北京</option><option>上海</option><option selected="selected">广州</option><option>深圳</option><option>成都</option><option>西安</option><option>福州</option><option>厦门</option><option>沈阳</option></select>
+</fieldset>
+
+<div id="aqi-chart-wrap"><div class="chat_item" onmouseover="hoverDetail(this)" onmouseout="hideDetail(this)" style="height: 87px;background-color:rgb(10,87,109)"><span class="detail">date: 2016-01<br>num: 87</span></div><div class="chat_item" onmouseover="hoverDetail(this)" onmouseout="hideDetail(this)" style="height: 95px;background-color:rgb(237,84,25)"><span class="detail">date: 2016-02<br>num: 95</span></div><div class="chat_item" onmouseover="hoverDetail(this)" onmouseout="hideDetail(this)" style="height: 89px;background-color:rgb(250,159,209)"><span class="detail">date: 2016-03<br>num: 89</span></div></div>
+
+<script src="Title_files/app.js"></script>
+
+</body></html>

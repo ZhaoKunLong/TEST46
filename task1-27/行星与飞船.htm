@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-HanS"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#000000">
+    <title>行星与飞船</title>
+    <link rel="stylesheet" href="%E8%A1%8C%E6%98%9F%E4%B8%8E%E9%A3%9E%E8%88%B9_files/main.css">
+</head>
+<body>
+<!-- 操作面板 -->
+<div style="left: 0px; top: 0px;" id="control">
+    <div id="control-title">Control 操作面板</div>
+    <div id="control-main">
+        <div data-id="0">
+            <span>第一轨道</span>
+            <select title="动力系统" data-type="drive"><option selected="selected" value="0">前进号（rate: 3°/s，consume: 5%/s）</option><option value="1">奔腾号（rate: 5°/s，consume: 7%/s）</option><option value="2">超越号（rate: 8°/s，consume: 9%/s）</option></select>
+            <select title="能源系统" data-type="energy"><option selected="selected" value="0">劲量型（charge: 2%/s）</option><option value="1">光能型（charge: 3%/s）</option><option value="2">永久型（charge: 4%/s）</option></select>
+            <button type="button" data-type="create" data-status="create">创建飞船</button>
+            <button type="button" disabled="disabled" data-type="drive" data-status="start">飞行</button>
+        </div>
+        <div data-id="1">
+            <span>第二轨道</span>
+            <select disabled="disabled" title="动力系统" data-type="drive"><option selected="selected" value="0">前进号（rate: 3°/s，consume: 5%/s）</option><option value="1">奔腾号（rate: 5°/s，consume: 7%/s）</option><option value="2">超越号（rate: 8°/s，consume: 9%/s）</option></select>
+            <select disabled="disabled" title="能源系统" data-type="energy"><option selected="selected" value="0">劲量型（charge: 2%/s）</option><option value="1">光能型（charge: 3%/s）</option><option value="2">永久型（charge: 4%/s）</option></select>
+            <button type="button" data-type="create" data-status="created">自爆销毁</button>
+            <button type="button" data-type="drive" data-status="start">飞行</button>
+        </div>
+        <div data-id="2">
+            <span>第三轨道</span>
+            <select title="动力系统" data-type="drive"><option selected="selected" value="0">前进号（rate: 3°/s，consume: 5%/s）</option><option value="1">奔腾号（rate: 5°/s，consume: 7%/s）</option><option value="2">超越号（rate: 8°/s，consume: 9%/s）</option></select>
+            <select title="能源系统" data-type="energy"><option selected="selected" value="0">劲量型（charge: 2%/s）</option><option value="1">光能型（charge: 3%/s）</option><option value="2">永久型（charge: 4%/s）</option></select>
+            <button type="button" data-type="create" data-status="create">创建飞船</button>
+            <button type="button" disabled="disabled" data-type="drive" data-status="start">飞行</button>
+        </div>
+        <div data-id="3">
+            <span>第四轨道</span>
+            <select title="动力系统" data-type="drive"><option selected="selected" value="0">前进号（rate: 3°/s，consume: 5%/s）</option><option value="1">奔腾号（rate: 5°/s，consume: 7%/s）</option><option value="2">超越号（rate: 8°/s，consume: 9%/s）</option></select>
+            <select title="能源系统" data-type="energy"><option selected="selected" value="0">劲量型（charge: 2%/s）</option><option value="1">光能型（charge: 3%/s）</option><option value="2">永久型（charge: 4%/s）</option></select>
+            <button type="button" data-type="create" data-status="create">创建飞船</button>
+            <button type="button" disabled="disabled" data-type="drive" data-status="start">飞行</button>
+        </div>
+    </div>
+</div>
+<!-- 控制台 -->
+<div style="left: 765px; top: 473px;" id="console"><div id="console-title">Console 控制台</div><div id="console-text"><p>2016-06-02 15:41:57.616 <span style="color: yellow;">在轨道2上创建飞船！</span></p><p>2016-06-02 15:41:57.924 <span style="color: green;">向 轨道2 发送 create 指令成功！</span></p><p>2016-06-02 15:41:59.742 <span style="color: yellow;">向轨道2发送开始飞行指令！</span></p><p>2016-06-02 15:42:00.046 <span style="color: green;">向 轨道2 发送 start 指令成功！</span></p><p>2016-06-02 15:42:01.467 <span style="color: yellow;">向轨道2发送停止飞行指令！</span></p><p>2016-06-02 15:42:01.773 <span style="color: green;">向 轨道2 发送 stop 指令成功！</span></p></div></div>
+<!-- 指挥官所在的蓝色星球 -->
+<div id="commander"></div>
+<!-- 四条轨道 -->
+<div id="orbit0" class="orbit"></div>
+<div id="orbit1" class="orbit"></div>
+<div id="orbit2" class="orbit"></div>
+<div id="orbit3" class="orbit"></div>
+<!-- 界面相关的js -->
+<script src="%E8%A1%8C%E6%98%9F%E4%B8%8E%E9%A3%9E%E8%88%B9_files/main.js"></script>
+<!-- 飞船类 -->
+<script src="%E8%A1%8C%E6%98%9F%E4%B8%8E%E9%A3%9E%E8%88%B9_files/spaceship.js"></script>
+<!-- 宇宙管理员（上帝） -->
+<script src="%E8%A1%8C%E6%98%9F%E4%B8%8E%E9%A3%9E%E8%88%B9_files/spaceManager.js"></script>
+<!-- 指挥官 -->
+<script src="%E8%A1%8C%E6%98%9F%E4%B8%8E%E9%A3%9E%E8%88%B9_files/commander.js"></script>
+
+
+<div style="transform: rotate(51deg);" class="space-ship orbit-ship1" id="spaceship1"><div style="width: 100%;" class="energy"></div><div class="text">100%</div></div></body></html>
