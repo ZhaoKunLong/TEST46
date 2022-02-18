@@ -1,2 +1,5 @@
-###tesk
-[查看](http://Zhaokung.github.io/TEST46/)
+### Buide Traning
+
+It's a traing for the beginer.
+
+[View it](https://zhaokunlong.github.io/TEST46/)
